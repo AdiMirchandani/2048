@@ -1,17 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Simple Cricket Game</title>
+  <title>Cricket Game</title>
   <style>
+    #gameContainer {
+      width: 600px;
+      margin: 0 auto; /* Center the game */
+      text-align: center;
+    }
+
     #gameCanvas {
-      border: 1px solid black;
+      border: 2px solid black;
+      background-color: lightgreen; /* Simulate a cricket field */
+    }
+
+    #scoreDisplay {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    #messageDisplay {
+      font-style: italic;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <h1>Cricket Game</h1>
-  <canvas id="gameCanvas" width="400" height="300"></canvas>
-  <button id="hitButton">Hit!</button>
+  <div id="gameContainer">
+    <h1>Cricket Game</h1>
+    <div id="scoreDisplay">Score: 0</div>
+    <div id="messageDisplay"></div>
+    <canvas id="gameCanvas" width="600" height="400"></canvas>
+    <button id="hitButton">Hit (Spacebar)</button>
+    </div>
   <script src="script.js"></script>
 </body>
 </html>
