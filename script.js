@@ -66,6 +66,15 @@ hitButton.addEventListener('click', () => {
   batY = Math.random() * (canvas.height - batHeight); // Move bat randomly
 });
 
+document.addEventListener('keydown', (event) => {
+  if (event.key === 'ArrowUp') {
+    batY -= 10;  // Move bat up
+    if (batY < 0) batY = 0; //Keep bat inside the canvas
+  } else if (event.key === 'ArrowDown') {
+    batY += 10; // Move bat down
+    if (batY + batHeight > canvas.height) batY = canvas.height - batHeight; //Keep bat inside the canvas
+  }
+});
 
 // Start the game loop
 gameLoop();
