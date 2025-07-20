@@ -1,43 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Cricket Game</title>
-  <style>
-    #gameContainer {
-      width: 600px;
-      margin: 0 auto; /* Center the game */
-      text-align: center;
-    }
-
-    #gameCanvas {
-      border: 2px solid black;
-      background-color: lightgreen; /* Simulate a cricket field */
-    }
-
-    #scoreDisplay {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
-
-    #messageDisplay {
-      font-style: italic;
-    }
-
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2048 Game</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="gameContainer">
-    <h1>Cricket Game</h1>
-    <div id="scoreDisplay">Score: 0</div>
-    <div id="messageDisplay"></div>
-    <canvas id="gameCanvas" width="600" height="400"></canvas>
-    <button id="hitButton">Hit (Spacebar)</button>
+    <div class="container">
+        <div class="score-panel">
+            <div class="score-box">
+                <span>Score</span>
+                <div id="score">0</div>
+            </div>
+            <div class="best-box">
+                <span>Best</span>
+                <div id="best">0</div>
+            </div>
+            <button id="restart" class="restart-btn">New Game</button>
+        </div>
+        <div class="game-container">
+            <div class="game-message">
+                <p></p>
+                <button class="keep-playing-button">Keep going</button>
+            </div>
+            <div class="grid-container">
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+                <div class="grid-row">
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                    <div class="grid-cell"></div>
+                </div>
+            </div>
+        </div>
     </div>
-  <script src="script.js"></script>
+    <script src="game.js"></script>
 </body>
 </html>
