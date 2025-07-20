@@ -2,6 +2,7 @@ const gameContainer = document.querySelector('.game-container');
 const gridContainer = document.querySelector('.grid-container');
 const scoreElement = document.getElementById('score');
 const bestScoreElement = document.getElementById('best');
+const worldRecordElement = document.getElementById('world-record');
 const restartButton = document.getElementById('restart');
 const gameMessage = document.querySelector('.game-message');
 const keepPlayingButton = document.querySelector('.keep-playing-button');
@@ -24,6 +25,7 @@ const tileColors = {
 let board = [];
 let score = 0;
 let bestScore = 0;
+let worldRecord = 0;
 let hasWon = false;
 
 // Initialize game
